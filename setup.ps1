@@ -26,7 +26,7 @@ winget install Fastfetch-cli.Fastfetch --source winget --disable-interactivity
 $env:PATH = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
 
 # gerar arquivo de conf inicial
-fastfetch --gen-config "$env:USERPROFILE\.config\fastfetch"
+fastfetch --gen-config "$env:USERPROFILE\.config\fastfetch\config.jsonc"
 
 # copiar arquivo de configuração do fastfetch
 Copy-Item ".\config.jsonc" "$env:USERPROFILE\.config\fastfetch"
