@@ -19,7 +19,7 @@ Write-Host "$PROFILE" -ForegroundColor DarkMagenta
 
 
 Write-Host "Instalando Fastfetch..."
-winget install Fastfetch-cli.Fastfetch --source winget --nowarn --disable-interactivity
+winget install Fastfetch-cli.Fastfetch --source winget --disable-interactivity
 
 # definir arquivo de configuração do fastfetch para .\config
 powershell
