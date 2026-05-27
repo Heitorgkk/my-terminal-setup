@@ -25,9 +25,11 @@ winget install Fastfetch-cli.Fastfetch --source winget --nowarn --disable-intera
 powershell
 fastfetch --config .\config.jsonc
 
+Clear-Host
 Write-Host "Fastfetch instalado e configurado com sucesso!"
 
 # permitir executar scripts
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 
 Write-Host "Ambiente personalizado instalado com sucesso!"
+powershell
