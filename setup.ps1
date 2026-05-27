@@ -28,11 +28,14 @@ $env:PATH = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";
 # definir arquivo de configuração do fastfetch para .\config
 fastfetch --config .\config.jsonc
 
-Clear-Host
 Write-Host "Fastfetch instalado e configurado com sucesso!"
 
 # permitir executar scripts
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 
 Write-Host "Ambiente personalizado instalado com sucesso!"
+
+Start-Sleep -Seconds 2
+Clear-Host
+
 powershell
