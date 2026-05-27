@@ -1,0 +1,26 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "Windows"
+  },
+  "modules": [
+    "OS",
+    "Uptime",
+    {
+      "type": "separator",
+      "string": "─"
+    },
+    "Display",
+    "CPU",
+    "GPU",
+    "Memory",
+    {
+      "type": "separator",
+      "string": "─"
+    },
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}
