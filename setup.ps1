@@ -1,6 +1,6 @@
-Write-Host "Bem vindo ao meu setup de personalização do Powershell" -ForegroundColor Red
+Write-Host "Bem vindo ao meu setup de personalizacao do Powershell" -ForegroundColor Green
 Write-Host ""
-Write-Host "Instalando dependências..."
+Write-Host "Instalando dependencias..."
 Write-Host ""
 
 
@@ -16,7 +16,7 @@ Copy-Item ".\profile.ps1" $PROFILE -Force
 
 Write-Host "Arquivo Profile instalado em: " -NoNewLine -ForegroundColor Blue
 Write-Host "$PROFILE" -ForegroundColor DarkMagenta
-
+Write-Host ""
 
 Write-Host "Instalando Fastfetch..."
 winget install Fastfetch-cli.Fastfetch --source winget --disable-interactivity
@@ -32,13 +32,14 @@ fastfetch --gen-config "$env:USERPROFILE\.config\fastfetch\config.jsonc"
 Copy-Item ".\config.jsonc" "$env:USERPROFILE\.config\fastfetch"
 
 Write-Host "Fastfetch instalado e configurado com sucesso!"
+Write-Host ""
 
-# permitir executar scripts
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+# desbloquear execução do profile (por conta do execution policy)
+Unblock-File -Path $PROFILE
 
-Write-Host "Ambiente personalizado instalado com sucesso!"
+Write-Host "Ambiente personalizado instalado com sucesso!" -ForegroundColor Green
 
-Start-Sleep -Seconds 2
+timeout /t -1
 Clear-Host
 
 powershell

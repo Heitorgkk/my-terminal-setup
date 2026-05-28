@@ -6,9 +6,11 @@ Customização de terminal no PowerShell com foco em visual limpo, estilo Linux/
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
+### Previews
 
 <img src=".\assets\preview1.png" width=100%>
 <img src=".\assets\preview2.png" width=100%>
+<img src=".\assets\preview3.png" width=100%>
 
 
 </div>
@@ -22,10 +24,11 @@ Customização de terminal no PowerShell com foco em visual limpo, estilo Linux/
 
 ```
 .
-├── .profile.ps1   # Configuração principal do terminal
-├── config.json    # (Opcional) configs futuras
-├── setup.ps1      # Script de instalação
-└── README.md
+├── config.json     # Configuração do fastfetch
+├── profile.ps1     # Configuração do powershell profile 
+├── setup.ps1       # Script de instalação
+├── README.md       
+└── assets(D)        
 ```
 
 ---
@@ -35,12 +38,12 @@ Customização de terminal no PowerShell com foco em visual limpo, estilo Linux/
 Para aplicar essa configuração em qualquer máquina Windows:
 
 ```powershell
-.\setup.ps1
+.\setup.md
 ```
 
 O script vai:
 
-- Copiar o `.profile.ps1` para o caminho correto do PowerShell (`$PROFILE`)
+- Copiar o `.profile.ps1` para o caminho correto do    PowerShell (`$PROFILE`)
 - Configurar permissões de execução
 - Preparar o ambiente automaticamente
 
@@ -61,14 +64,16 @@ Se o arquivo estiver em outro lugar, esse caminho precisa ser atualizado.
 
 ## Customização do Prompt
 
-A aparência do terminal é controlada pela função `prompt`:
+A aparência do terminal é controlada pela função `prompt` dentro de `$PROFILE`:
 
 ```powershell
 function prompt {
+    # variaveis para colocar no terminal
     $user = $env:USERNAME
     $hostName = $env:COMPUTERNAME
     $path = Split-Path -Leaf (Get-Location)
 
+    # construção da linha
     Write-Host "┌──(" -NoNewline -ForegroundColor DarkGray
     Write-Host "${user}" -NoNewline -ForegroundColor Blue
     Write-Host "@" -NoNewline -ForegroundColor Cyan
@@ -78,6 +83,7 @@ function prompt {
     Write-Host "]" -ForegroundColor DarkGray
 
     Write-Host "└──" -NoNewline -ForegroundColor DarkGray
+
     return "$ "
 }
 ```
