@@ -49,16 +49,9 @@ O script vai:
 
 
 
->  **Atenção com paths**
-> Se você mover os arquivos ou alterar a estrutura do projeto, ajuste os caminhos dentro do `setup.ps1`.
+> **Atenção**
+> Possíveis erros com relação a Política de Execução (`Get-ExecutionPolicy -list`) 
 
-Exemplo:
-
-```powershell
-Copy-Item ".\profile.ps1" $PROFILE -Force
-```
-
-Se o arquivo estiver em outro lugar, esse caminho precisa ser atualizado.
 
 ---
 
