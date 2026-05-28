@@ -4,7 +4,13 @@ Write-Host "Instalando dependencias..."
 Write-Host ""
 
 # criar variavel de ambiente com path do projeto
-$env:MY_TERMINAL_SETUP = Get-Location
+$projectDir = Get-Location
+
+[System.Environment]::SetEnvironmentVariable(
+    "MY_TERMINAL_SETUP",
+    $projectDir,
+    "User"
+)
 
 # criar arquivo profile para personalizar promt
 $profilePath = Split-Path -Parent $PROFILE

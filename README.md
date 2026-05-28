@@ -49,7 +49,7 @@ O script vai:
 
 
 
-> **Atenção**
+> **Atenção** </b>
 > Possíveis erros com relação a Política de Execução (`Get-ExecutionPolicy -list`) 
 
 
