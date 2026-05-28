@@ -1,4 +1,4 @@
-Write-Host "Bem vindo ao meu setup de personalização do Powershell" -ForegroundColor Red
+Write-Host "Bem vindo ao meu setup de personalização do Powershell" -ForegroundColor Green
 Write-Host ""
 Write-Host "Instalando dependências..."
 Write-Host ""
