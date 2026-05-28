@@ -6,7 +6,15 @@ Customização de terminal no PowerShell com foco em visual limpo, estilo Linux/
 
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
+
+<img src=".\assets\preview1.png" width=100%>
+<img src=".\assets\preview2.png" width=100%>
+
+
 </div>
+
+
+
 
 ---
 
