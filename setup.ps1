@@ -19,7 +19,7 @@ if (!(Test-Path $profilePath)) {
 }
 
 # copiar profile do setup
-Copy-Item ".\profile.ps1" $PROFILE -Force
+Copy-Item ".\configs\profile.ps1" $PROFILE -Force
 Write-Host "Arquivo Profile instalado em: " -NoNewLine -ForegroundColor Blue
 Write-Host "$PROFILE" -ForegroundColor DarkMagenta
 Write-Host ""
@@ -34,7 +34,7 @@ $env:PATH = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";
 fastfetch --gen-config "$env:USERPROFILE\.config\fastfetch\config.jsonc"
 
 # copiar arquivo de configuração do fastfetch
-Copy-Item ".\config.jsonc" "$env:USERPROFILE\.config\fastfetch"
+Copy-Item ".\configs\config.jsonc" "$env:USERPROFILE\.config\fastfetch"
 
 Write-Host "Fastfetch instalado e configurado com sucesso!"
 Write-Host ""
@@ -43,9 +43,12 @@ Write-Host ""
 
 Get-ChildItem | Unblock-File
 Get-ChildItem .\functions | Unblock-File
+Get-ChildItem .\configs | Unblock-File
 
 
 Write-Host "Ambiente personalizado instalado com sucesso!" -ForegroundColor Green
+
+Write-Host "AVISO: O primeiro run pode causar um erro com relação aos paths, mas só ocorre uma vez" -ForegroundColor DarkRed
 
 timeout /t -1
 Clear-Host
