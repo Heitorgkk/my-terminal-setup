@@ -35,15 +35,15 @@ fastfetch --gen-config "$env:USERPROFILE\.config\fastfetch\config.jsonc"
 
 # copiar arquivo de configuração do fastfetch
 Copy-Item ".\configs\config.jsonc" "$env:USERPROFILE\.config\fastfetch"
+Write-Host "Arquivo de configuração do Fastfetch copiado para: " -NoNewLine -ForegroundColor Blue
+Write-Host "$env:USERPROFILE\.config\fastfetch\config.jsonc" -ForegroundColor DarkMagenta
 
+Write-Host ""
 Write-Host "Fastfetch instalado e configurado com sucesso!"
 Write-Host ""
 
 # Desbloquear todos os arquivos do diretorio, veja Get-Help Unblock-File para mais detalhes
-
-Get-ChildItem | Unblock-File
-Get-ChildItem .\functions | Unblock-File
-Get-ChildItem .\configs | Unblock-File
+Get-ChildItem -R | Unblock-File
 
 
 Write-Host "Ambiente personalizado instalado com sucesso!" -ForegroundColor Green
