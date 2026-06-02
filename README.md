@@ -1,5 +1,9 @@
 # My Terminal Setup!
+<!-- 
 
+ATUALIZAR O README MDSSSS 
+
+-->
 Customização de terminal no PowerShell com foco em visual limpo, estilo Linux/Kali e reutilização fácil.
 
 <div align="center">

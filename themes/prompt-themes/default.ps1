@@ -1,8 +1,3 @@
-Clear-Host
-Write-Host ""
-fastfetch --config "$env:USERPROFILE\.config\fastfetch\config.jsonc"
-Write-Host ""
-
 function prompt {
     $user = $env:USERNAME
     $hostName = $env:COMPUTERNAME
