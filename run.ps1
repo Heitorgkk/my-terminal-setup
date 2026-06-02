@@ -2,8 +2,8 @@
 
 Write-Host "Recarregando configurações..." -ForegroundColor Green
 
-Copy-Item ".\configs\profile.ps1" $PROFILE -Force
-Copy-Item ".\configs\config.jsonc" "$env:USERPROFILE\.config\fastfetch" -Force
+Copy-Item "$env:MY_TERMINAL_SETUP\configs\profile.ps1" $PROFILE -Force
+Copy-Item "$env:MY_TERMINAL_SETUP\configs\config.jsonc" "$env:USERPROFILE\.config\fastfetch" -Force
 
 Start-Sleep -M 500
 
